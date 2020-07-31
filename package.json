@@ -1,0 +1,28 @@
+{
+    "name": "clubfinderes2015",
+    "version": "1.0.0",
+    "description": "Latihan clubfinder dengan eslint",
+    "main": "app.js",
+    "scripts": {
+        "debug": "parcel index.html --port 4200"
+    },
+    "author": "gulajava",
+    "license": "MIT",
+    "dependencies": {
+        "@babel/runtime": "^7.10.5"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.10.5",
+        "@babel/plugin-transform-runtime": "^7.10.5",
+        "nodemon": "^2.0.4",
+        "parcel-bundler": "^1.12.4",
+        "prettier": "^2.0.5",
+        "eslint": "^7.5.0",
+        "eslint-config-airbnb": "^18.2.0",
+        "eslint-config-node": "^4.1.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^3.1.4"
+    }
+}
