@@ -4,7 +4,8 @@
     "description": "Latihan clubfinder dengan eslint",
     "main": "app.js",
     "scripts": {
-        "debug": "parcel index.html --port 4200"
+        "debug": "parcel index.html --port 4200",
+        "kopi": "parcel src/coffemakeres/index.html --port 4200"
     },
     "author": "gulajava",
     "license": "MIT",

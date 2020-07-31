@@ -6,8 +6,24 @@ const main = () => {
     const clubListElement = document.querySelector('#clubList');
 
     const onButtonSearchClicked = () => {
-        let dataSource = new DataSource(renderResult, fallbackResult);
-        dataSource.searchClub(searchElement.value);
+        // let dataSource = new DataSource(renderResult, fallbackResult);
+        // dataSource.searchClub(searchElement.value);
+        DataSource.searchClubsAsync(searchElement.value)
+            .then(renderResult)
+            .catch(fallbackResult);
+    };
+
+    const onButtonSearchClickedAsync = async () => {
+        try {
+            const results = await DataSource.searchClubsAsync(
+                searchElement.value,
+            );
+
+            renderResult(results);
+        } catch (err) {
+            console.log(err);
+            fallbackResult(err);
+        }
     };
 
     const renderResult = (results) => {
