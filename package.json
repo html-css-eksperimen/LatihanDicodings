@@ -5,7 +5,10 @@
     "main": "app.js",
     "scripts": {
         "debug": "parcel index.html --port 4200",
-        "kopi": "parcel src/coffemakeres/index.html --port 4200"
+        "builds": "parcel build index.html",
+        "kopi": "parcel src/coffemakeres/index.html --port 4200",
+        "webcom": "parcel src/webcomponents/index.html --port 4200",
+        "webcom1": "parcel src/articlecomponents/index.html --port 4200"
     },
     "author": "gulajava",
     "license": "MIT",
