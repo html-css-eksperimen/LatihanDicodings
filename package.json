@@ -8,7 +8,8 @@
         "builds": "parcel build index.html",
         "kopi": "parcel src/coffemakeres/index.html --port 4200",
         "webcom": "parcel src/webcomponents/index.html --port 4200",
-        "webcom1": "parcel src/articlecomponents/index.html --port 4200"
+        "webcom1": "parcel src/articlecomponents/index.html --port 4200",
+        "clubcom": "parcel src/clubfindercomps/index.html --port 4200"
     },
     "author": "gulajava",
     "license": "MIT",
