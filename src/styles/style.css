@@ -1,6 +1,7 @@
 @import "../styles/appbar.css";
 @import "../styles/clublist.css";
 @import "../styles/searchbar.css";
+
 * {
     padding: 0;
     margin: 0;

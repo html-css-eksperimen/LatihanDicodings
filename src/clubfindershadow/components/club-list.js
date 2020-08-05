@@ -4,6 +4,7 @@ class ClubList extends HTMLElement {
     constructor() {
         super();
         console.log('Club list created');
+        this._shadowdom = this.attachShadow({ mode: 'closed' });
     }
 
     set clubItemList(clublist) {
@@ -33,16 +34,32 @@ class ClubList extends HTMLElement {
                 listClubItem.push(clubItemEl);
             });
 
-            this.innerHTML = '';
-            this.append(...listClubItem);
+            this._shadowdom.innerHTML = '';
+            this._shadowdom.append(...listClubItem);
         }
     }
 
     renderError(message) {
         console.log('render error', message);
         const elFallback = /*html*/ `<h2 class="placeholder">${message}</h2>`;
-        this.innerHTML = '';
-        this.innerHTML += elFallback;
+
+        const styleEl = /* html */ `
+        <style>
+            .placeholder {
+                font-weight: lighter;
+                color: rgba(0, 0, 0, 0.5);
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                display: block;
+            }
+        </style>
+    `;
+
+        this._shadowdom.innerHTML = '';
+        this._shadowdom.innerHTML += styleEl;
+        this._shadowdom.innerHTML += elFallback;
     }
 }
 
